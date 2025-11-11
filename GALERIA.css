@@ -1,0 +1,291 @@
+*{
+    list-style: none; /*opciones del menu sin puntitos, si o si aumentar si es que ponemos el menu aqui tambien. SIEMPRE SE DEBE DE PONES AQUI: *{} */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Gadugi" /*fuente para todo*/
+}
+
+body{
+    background: #8ecd6fe2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #5bd70d, #195207);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #47ad0f, #115906f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*ENCABEZADO*/ /*al copiar el header, siempre aumentar en el *{} list-style: none; */
+header{
+    width: 100%;
+    position: absolute; /*cambiar a absolute para que se quede arriba y se aprecie mejor la pestaña*/
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+.logo{
+    height: 100px; /*altura del logo*/
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.item a{
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 600; /*grosor*/
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+.item a:hover{
+    color: #157608; /*se vuelva ese color cuando acerquemos el cursor a las opciones del menu*/
+}
+
+#menu{
+    display: none; /*para ocultar el input*/
+}
+
+.menu_icono{
+    width: 25px; /*tamaño del menu hamburguesa*/
+}
+
+label{
+    cursor: pointer;
+    display: none; /*que desaparezca el menu hamburguesa*/
+}
+
+/*responsive del menu*/
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+        margin: 0;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .item{
+        margin: 0 0 20px 0; /*0 arriba 0 derecha 20px abajo 0 izquierda*/
+        width: 100%;
+    }
+
+    #menu:checked ~ .menu{
+        display: initial;
+    }
+}
+/*FIN ENCABEZADO*/
+
+h1{
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 60px;
+}
+
+.linea{
+    border-top: 5px solid #42cb57; /*color de la linea*/
+    display: block;
+    margin-bottom: 5px; /*espacio ente la linea de arriba y las imagenes de abajo*/
+    margin-top: 100px; /*si lo borro, la linea sube arriba*/
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.galeria > a{
+    display: block;
+    position: static; /*para que el menu hamburguesa aparezca por delante al darle click*/
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5); /*apariencia de sombreado en las imagenes*/
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px; /*es el alto de todas las imagenes, varia si es vertical u horizontal*/
+    object-fit: cover;
+    transition: transform 0.5s; /*para que se chuequee con estilo medio video*/
+}
+
+.galeria a:hover img{
+    filter: blur(2px); /*para que cuando acerquemos el cursor a una imagen se vuelva borroso*/
+    transform: rotate(10deg) scale(1.3); /*para que cuando acerquemos el cursor a una imagen se chuequee*/
+}
+
+
+.light_box{
+    position: fixed; /*que la imagen que se seleccione con el cursor, se quede fija en la pantalla*/
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out; /*velocidad con la que aparece la imagen seleccionada*/
+    width: 100%;
+    height: 100vh; /*para que la imagen seleccionada este al medio de la pantalla*/
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0); /*que se reduzca a nada o desaparezca, osea 0*/
+}
+
+.light_box img{
+    width: 75vw; /*que ocupe el 75% a lo ANCHO de la pantalla*/
+    max-height: 100vh; /*que ocupe el 100% de alto de la pantalla*/
+}
+
+/*TARGETEADO*/
+.light_box:target{
+    transform: scale(1);
+}
+
+/*para la X*/
+.close{
+    display: block;
+    position: absolute;
+    top: 27px; /*ditancia de arriba hacia abajo*/
+    right: 40px;
+    background: #57b139b9; /*fondo de la x*/
+    color: #fff; /*color de la x*/
+    text-decoration: none;
+    width: 40px; /*ancho del fondo guindo*/
+    height: 40px; /*alto del fondo guindo*/
+    text-align: center; /*centrar horizontalmente la x en el fondo guindo*/
+    line-height: 40px; /*centrar verticalmente la x en el fondo guindo*/
+    border-radius: 50%; /*para que el fondo guindo sea circulo (esquinas redondeadas)*/
+}
+
+/*para las flechas*/
+.next{
+    display: block;
+    background: #1a8a21; /*fondo de flecha*/
+    color: #fff; /*color de flecha*/
+    text-decoration: none;
+    height: 30px; /*ancho del fondo*/
+    width: 30px; /*alto del fondo*/
+    text-align: center; /*centrar horizontalmente*/
+    line-height: 30px; /*centrar verticalmente*/
+}
+
+@media screen and (max-width:400px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+
+/*PIE DE PAGINA*/
+footer{  /*footer siempre abajo*/
+    margin-top: auto;
+}
+.pie_pagina {
+    width: 100%; /*ancho de 100%*/
+    background-color: #2e532eb3;
+}
+
+.pie_pagina .grupo_1 {
+    width: 100%;
+    max-width: 1200px; /*maximo de ancho*/
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*que se repita 3 columnas y que ocupe todo el ancho*/
+    grid-gap: 50px; /*cada columna que tenga un margen de 50px*/
+    padding: 45px 0px; /*45 hacia arriba y o hacia los costados*/
+}
+
+.pie_pagina .grupo_1 .box figure { /*figure es para buscar a la etiqueta figure del primer box*/
+    width: 150%;
+    height: 100%;
+    display: flex; /*flex para que sea flexible*/
+    justify-content: center; /*centrar horizontalmente*/
+    align-items: center; /*centrar verticalmente*/
+}
+
+.pie_pagina .grupo_1 .box figure img {
+    width: 200px; /*define el tamaño del la foto o logo del pie de pagina*/
+}
+
+.pie_pagina .grupo_1 .box h2 {
+    color: #fff; /*color de la letra de SOBRE NOSOTROS y SIGUENOS*/
+    margin-bottom: 25px; /*margen inferior para que pueda separarse con el parrafo*/
+    font-size: 20px;
+}
+
+.pie_pagina .grupo_1 .box p {
+    color: #efefef;
+    margin-bottom: 10px /*margen inferior para que el parrafo de abajo se separen con el de arriba*/;
+}
+
+.pie_pagina .grupo_1 .red_social a { /*para los iconos de redes sociales*/
+    display: inline-block;
+    text-decoration: none; /*para que se borre su subrayado*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px; /*margen derecha*/
+    background-color: #386e35;
+    text-align: center; /*para centrar los iconos en sus cuadrados*/
+    transition: all ease 300ms; /*la velocidad con que aparece la manito en vez del cursor para seleccionar un icono*/
+}
+
+.pie_pagina .grupo_1 .red_social a:hover { /*a:hover siempre debe ir jundo, si esta asi: a :hover no funciona*/
+    color: rgb(53, 124, 73); /*que cambie de color cuando acerquemos el cursor*/
+    transform: scale(1.2); /*que sea mas grande cuando acerquemos el cursor*/
+}
+
+.pie_pagina .grupo_2 {
+    background-color: #1f3a1c;
+    padding:  15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie_pagina .grupo_2 small {
+    font-size: 20px; /*tamaño de la ultima fila de abajo*/
+}
+
+/*responsive pie de pagina*/
+@media screen and (max-width:800px){
+    .pie_pagina .grupo_1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr); /*que se repita 3 columnas y que ocupe todo el ancho*/
+        grid-gap: 30px; /*cada columna que tenga un margen de 50px*/
+        padding: 35px 0px; /*45 hacia arriba y o hacia los costados*/
+    }
+}
+/*FIN PIE DE PAGINA*/

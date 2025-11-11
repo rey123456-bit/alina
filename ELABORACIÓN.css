@@ -1,0 +1,268 @@
+*{
+    list-style: none; /*opciones del menu sin puntitos, si o si aumentar si es que ponemos el menu aqui tambien. SIEMPRE SE DEBE DE PONES AQUI: *{} */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gadugi" /*fuente para todo*/
+}
+
+body{
+   background: #8ecd6fe2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #5bd70d, #195207);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #47ad0f, #115906f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*ENCABEZADO*/ /*al copiar el header, siempre aumentar en el *{} list-style: none; */
+header{
+    width: 100%;
+    position: absolute; /*cambiar a absolute para que se quede arriba y se aprecie mejor la pestaña*/
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+.logo{
+    height: 80px; /*altura del logo*/
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.item a{
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 600; /*grosor*/
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+.item a:hover{
+    color: #3ba939; /*se vuelva ese color cuando acerquemos el cursor a las opciones del menu*/
+}
+
+#menu{
+    display: none; /*para ocultar el input*/
+}
+
+.menu_icono{
+    width: 25px; /*tamaño del menu hamburguesa*/
+}
+
+label{
+    cursor: pointer;
+    display: none; /*que desaparezca el menu hamburguesa*/
+}
+
+/*responsive del menu*/
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+        margin: 0;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .item{
+        margin: 0 0 20px 0; /*0 arriba 0 derecha 20px abajo 0 izquierda*/
+        width: 100%;
+    }
+
+    #menu:checked ~ .menu{
+        display: initial;
+    }
+}
+/*FIN ENCABEZADO*/
+
+.linea{
+    border-top: 5px solid #54bf26; /*color de la linea*/
+    margin-bottom: 50px; /*espacio ente la linea de arriba y las imagenes de abajo*/
+    margin-top: 100px; /*si lo borro, la linea sube arriba*/
+}
+
+.contenedor_imagenes{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap; /*colocar una imagen debajo de la otra*/
+    border-radius: 3px;
+}
+
+.contenedor_imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+}
+
+.imagen img{
+    width: 100%; /*que ocupe el 100% de su contenedor*/
+    height: 100%; /*que ocupe el 100% de su contenedor*/
+    object-fit: cover; /*para que una imagen no se vea estirada si no cabe en su contenedor*/
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(92, 233, 11, 0.781);
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+/*responsive*/
+@media screen and (max-width:1000px){
+    .contenedor_imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor_imagenes{
+        width: 90%;
+    }
+
+    .contenedor_imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size: 22px;
+    }
+    .contenedor_imagenes{
+        width: 98%;
+    }
+
+    .contenedor_imagenes .imagen{
+        width: 80%;
+    }
+}
+
+
+
+
+/*PIE DE PAGINA*/
+footer{  /*footer siempre abajo*/
+    margin-top: auto;
+}
+.pie_pagina {
+    width: 100%; /*ancho de 100%*/
+    background-color: #2e532ebe;
+}
+
+.pie_pagina .grupo_1 {
+    width: 100%;
+    max-width: 1200px; /*maximo de ancho*/
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*que se repita 3 columnas y que ocupe todo el ancho*/
+    grid-gap: 50px; /*cada columna que tenga un margen de 50px*/
+    padding: 45px 0px; /*45 hacia arriba y o hacia los costados*/
+}
+
+.pie_pagina .grupo_1 .box figure { /*figure es para buscar a la etiqueta figure del primer box*/
+    width: 150%;
+    height: 100%;
+    display: flex; /*flex para que sea flexible*/
+    justify-content: center; /*centrar horizontalmente*/
+    align-items: center; /*centrar verticalmente*/
+}
+
+.pie_pagina .grupo_1 .box figure img {
+    width: 200px; /*define el tamaño del la foto o logo del pie de pagina*/
+}
+
+.pie_pagina .grupo_1 .box h2 {
+    color: #fff; /*color de la letra de SOBRE NOSOTROS y SIGUENOS*/
+    margin-bottom: 25px; /*margen inferior para que pueda separarse con el parrafo*/
+    font-size: 20px;
+}
+
+.pie_pagina .grupo_1 .box p {
+    color: #efefef;
+    margin-bottom: 10px /*margen inferior para que el parrafo de abajo se separen con el de arriba*/;
+}
+
+.pie_pagina .grupo_1 .red_social a { /*para los iconos de redes sociales*/
+    display: inline-block;
+    text-decoration: none; /*para que se borre su subrayado*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px; /*margen derecha*/
+    background-color: #386e35;
+    text-align: center; /*para centrar los iconos en sus cuadrados*/
+    transition: all ease 300ms; /*la velocidad con que aparece la manito en vez del cursor para seleccionar un icono*/
+}
+
+.pie_pagina .grupo_1 .red_social a:hover { /*a:hover siempre debe ir jundo, si esta asi: a :hover no funciona*/
+    color: rgb(53, 124, 73); /*que cambie de color cuando acerquemos el cursor*/
+    transform: scale(1.2); /*que sea mas grande cuando acerquemos el cursor*/
+}
+
+.pie_pagina .grupo_2 {
+    background-color: #1f3a1c;
+    padding:  15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie_pagina .grupo_2 small {
+    font-size: 20px; /*tamaño de la ultima fila de abajo*/
+}
+
+/*responsive pie de pagina*/
+@media screen and (max-width:800px){
+    .pie_pagina .grupo_1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr); /*que se repita 3 columnas y que ocupe todo el ancho*/
+        grid-gap: 30px; /*cada columna que tenga un margen de 50px*/
+        padding: 35px 0px; /*45 hacia arriba y o hacia los costados*/
+    }
+}
+/*FIN PIE DE PAGINA*/

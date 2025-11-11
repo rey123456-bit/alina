@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GALERÍA</title>
+  <link rel="shortcut icon" href="img/logo adonai.png" type="image/x-icon"> <!--para el logo de la pestaña-->
+  <link rel="stylesheet" href="GALERIA.css">
+
+  <script src="https://kit.fontawesome.com/c3042ab71f.js" crossorigin="anonymous"></script> <!--enlace para los iconos de redes sociales-->
+</head>
+
+<body>
+  <!--ENCABEZADO-->
+  <header id="Header">
+    <img src="img/logo adonai.png" class="logo" alt="">
+    <input type="checkbox" id="menu" />
+    <label for="menu">
+      <img src="img/menu.png" class="menu_icono" alt="">
+    </label>
+
+    <ul class="menu">
+      <li class="item"><a href="index.html">INICIO</a></li>
+      <li class="item"><a href="GALERIA.html">GALERÍA</a></li>
+      <li class="item"><a href="ELABORACIÓN.html">ELABORACIÓN</a></li>
+      <li class="item"><a href="TIENDA.html">TIENDA</a></li>
+    </ul>
+  </header>
+  <!--FIN ENCABEZADO-->
+
+
+  <!--GALERIA DE IMAGENES-->
+  <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
+  
+  <span class="linea"></span>
+
+  <section class="galeria">
+    <a href="#image1"> <!--si o si tienen que tener el #-->
+      <img src="img_GALERIA/IMG-1.jpg" alt="">
+    </a>
+    <a href="#image2">
+      <img src="img_GALERIA/IMG-2.jpg" alt="">
+    </a>
+    <a href="#image3">
+      <img src="img_GALERIA/IMG-3.jpg" alt="">
+    </a>
+    <a href="#image4">
+      <img src="img_GALERIA/IMG-4.jpg" alt="">
+    </a>
+    <a href="#image5">
+      <img src="img_GALERIA/IMG-5.jpg" alt="">
+    </a>
+    <a href="#image6">
+      <img src="img_GALERIA/IMG-6.jpg" alt="">
+    </a>
+    <a href="#image7">
+      <img src="img_GALERIA/IMG-7.jpg" alt="">
+    </a>
+    <a href="#image8">
+      <img src="img_GALERIA/IMG-8.jpg" alt="">
+    </a>
+    <a href="#image9">
+      <img src="img_GALERIA/IMG-9.jpg" alt="">
+    </a>
+    <a href="#image10">
+      <img src="img_GALERIA/IMG-10.jpg" alt="">
+    </a>
+    <a href="#image11">
+      <img src="img_GALERIA/IMG-11.jpg" alt="">
+    </a>
+    <a href="#image12">
+      <img src="img_GALERIA/IMG-12.jpg" alt="">
+    </a>
+    <a href="#image13">
+      <img src="img_GALERIA/IMG-13.jpg" alt="">
+    </a>
+    <a href="#image14">
+      <img src="img_GALERIA/IMG-14.jpg" alt="">
+    </a>
+    <a href="#image15">
+      <img src="img_GALERIA/IMG-15.jpg" alt="">
+    </a>
+    <a href="#image16">
+      <img src="img_GALERIA/IMG-16.jpg" alt="">
+    </a>
+    <a href="#image17">
+      <img src="img_GALERIA/IMG-17.jpg" alt="">
+    </a>
+    <a href="#image18">
+      <img src="img_GALERIA/IMG-18.jpg" alt="">
+    </a>
+    <a href="#image19">
+      <img src="img_GALERIA/IMG-19.jpg" alt="">
+    </a>
+    <a href="#image20">
+      <img src="img_GALERIA/IMG-20.jpg" alt="">
+    </a>
+    <a href="#image21">
+      <img src="img_GALERIA/IMG-21.jpg" alt="">
+    </a>
+    <a href="#image22">
+      <img src="img_GALERIA/IMG-22.jpg" alt="">
+    </a>
+    <a href="#image23">
+      <img src="img_GALERIA/IMG-23.jpg" alt="">
+    </a>
+    <a href="#image24">
+      <img src="img_GALERIA/IMG-24.jpg" alt="">
+    </a>
+  </section>
+
+  <article class="light_box" id="image1">
+    <a href="#image24" class="next"> <i class="fas fa-arrow-left"></i> </a> <!--en href dice "#image6" porque va a regresar a la imagen 6 si le damos a la flecha de retroceder (siempre con su #)-->
+    <img src="img_GALERIA/IMG-1.jpg" alt="">
+    <a href="#image2" class="next"> <i class="fas fa-arrow-right"></i> </a> <!--en href dice "#image2" porque va a avanzar a la imagen 2 si le damos a la flecha de avanzar-->
+    <a href="#" class="close">X</a> <!--el # despues de href es para que la imagen seleccionada, cuando le demos en la x, desaparezca con estilo-->
+  </article>
+
+  <article class="light_box" id="image2"> <!--hay que cambiar el id a image2-->
+    <a href="#image1" class="next"> <i class="fas fa-arrow-left"></i> </a> <!--en href dice "#image1" porque va a regresar a la imagen 1 si le damos a la flecha de retroceder-->
+    <img src="img_GALERIA/IMG-2.jpg" alt=""> <!--hay que cambiar el img a G-2-->
+    <a href="#image3" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a> <!--el # despues de href es para que la imagen seleccionada, cuando le demos en la x, desaparezca con estilo-->
+  </article>
+
+  <article class="light_box" id="image3">
+    <a href="#image2" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-3.jpg" alt="">
+    <a href="#image4" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image4">
+    <a href="#image3" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-4.jpg" alt="">
+    <a href="#image5" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image5">
+    <a href="#image4" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-5.jpg" alt="">
+    <a href="#image6" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image6">
+    <a href="#image5" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-6.jpg" alt="">
+    <a href="#image7" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image7">
+    <a href="#image6" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-7.jpg" alt="">
+    <a href="#image8" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image8">
+    <a href="#image7" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-8.jpg" alt="">
+    <a href="#image9" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image9">
+    <a href="#image8" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/G-9.jpg" alt="">
+    <a href="#image10" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image10">
+    <a href="#image9" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-10.jpg" alt="">
+    <a href="#image11" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image11">
+    <a href="#image10" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-11.jpg" alt="">
+    <a href="#image12" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image12">
+    <a href="#image11" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-12.jpg" alt="">
+    <a href="#image13" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image13">
+    <a href="#image12" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-13.jpg" alt="">
+    <a href="#image14" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image14">
+    <a href="#image13" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-14.jpg" alt="">
+    <a href="#image15" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image15">
+    <a href="#image14" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-15.jpg" alt="">
+    <a href="#image16" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image16">
+    <a href="#image15" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-16.jpg" alt="">
+    <a href="#image17" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image17">
+    <a href="#image16" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-17.jpg" alt="">
+    <a href="#image18" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image18">
+    <a href="#image17" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-18.jpg" alt="">
+    <a href="#image19" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image19">
+    <a href="#image18" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-19.jpg" alt="">
+    <a href="#image20" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image20">
+    <a href="#image19" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-20.jpg" alt="">
+    <a href="#image21" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image21">
+    <a href="#image20" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-21.jpg" alt="">
+    <a href="#image22" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image22">
+    <a href="#image21" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-22.jpg" alt="">
+    <a href="#image23" class="next"> <i class="fas fa-arrow-right"></i> </a>
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image23"> <!--ES 23-->
+    <a href="#image22" class="next"> <i class="fas fa-arrow-left"></i> </a> <!--RETROCEDE A 22-->
+    <img src="img_GALERIA/IMG-23.jpg" alt=""> <!--ES 23-->
+    <a href="#image24" class="next"> <i class="fas fa-arrow-right"></i> </a> <!--AVANZA A 24-->
+    <a href="#" class="close">X</a>
+  </article>
+
+  <article class="light_box" id="image24">
+    <a href="#image23" class="next"> <i class="fas fa-arrow-left"></i> </a>
+    <img src="img_GALERIA/IMG-24.jpg" alt="">
+    <a href="#image1" class="next"> <i class="fas fa-arrow-right"></i> </a> <!--si avanza va a ir a la imagen 1 porque ya no hay mas imagenes-->
+    <a href="#" class="close">X</a>
+  </article>
+  <!--FIN GALERIA DE IMAGENES-->
+
+
+
+  <!--PIE DE PAGINA-->
+ <footer class="pie_pagina">
+    <div class="grupo_1">
+
+      <div class="box">
+        <figure>
+          <a href="fuente de internet">
+            <img src="img/logo adonai.png" alt="">
+          </a>
+        </figure>
+      </div>
+
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>CONTÁCTANOS AL: +591 67257443</p>
+        <p> COSAPA - ORURO - BOLIVIA</p>
+      </div>
+
+      <div class="box">
+        <h2>SÍGUENOS</h2>
+        <div class="red_social">
+          <a href="https://www.facebook.com/share/14NU6kN6ocC/" class="fa fa-facebook" target="_blank"></a> <!--target para que cuando vayamos al icono de faceboock nos lleve a OTRA pestaña-->
+          <a href="https://www.instagram.com/tejidos_adonai_20?igsh=MjhlanlnMG1hNHBo" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://x.com/TAdonai49906?t=40YsuewgDWqiFjR9wOL91w&s=09" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.youtube.com/@TejidosAdonai" class="fa fa-youtube" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grupo_2">
+      <small>OBSERVA NUESTROS PRODUCTOS DE ALTA CALIDAD, ELABORADOS CON FIBRA DE CAMELIDOS</small>
+    </div>
+  </footer>
+  <!--FIN PIE DE PAGINA-->
+
+  </body>
+</html>
